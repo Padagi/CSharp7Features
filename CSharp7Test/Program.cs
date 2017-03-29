@@ -36,10 +36,12 @@ namespace CSharp7Features
             Console.WriteLine($"{pointX + 100}");
             Console.WriteLine($"{pointY - 10}");
 
+            // Creating some values for deconstruction.
+            var values = new double[] { 1.33, 100.34, 244033.22 };
+
             // Deconstructing Tuple return type to new variables.
             Console.WriteLine();
-            Console.WriteLine("Deconstructing Tuple return type to new variables.");
-            var values = new double[] { 1.33, 100.34, 244033.22 };
+            Console.WriteLine("Deconstructing Tuple return type to new variables.");            
             var (count, sum) = Tally(values);
             Console.WriteLine($"Count of values was {count} and sum of values was {sum.ToString("C")}.");
 
@@ -49,9 +51,8 @@ namespace CSharp7Features
             // Pre-created, existing variables.
             int existingCount = 0;
             double existingSum = 0.00;
-            var values2 = new double[] { 1.33, 100.34, 244033.22 };
             // Assigning returned tuple to pre-existing variables.
-            (existingCount, existingSum) = Tally(values2);
+            (existingCount, existingSum) = Tally(values);
             Console.WriteLine($"Count of values was {existingCount} and sum of values was {existingSum.ToString("C")}.");
 
             // Patterns examples.
