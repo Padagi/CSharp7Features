@@ -43,6 +43,17 @@ namespace CSharp7Features
             var (count, sum) = Tally(values);
             Console.WriteLine($"Count of values was {count} and sum of values was {sum.ToString("C")}.");
 
+            // Deconstructing Tuple return type to existing variables.
+            Console.WriteLine();
+            Console.WriteLine("Deconstructing Tuple return type to existing variables.");
+            // Pre-created, existing variables.
+            int existingCount = 0;
+            double existingSum = 0.00;
+            var values2 = new double[] { 1.33, 100.34, 244033.22 };
+            // Assigning returned tuple to pre-existing variables.
+            (existingCount, existingSum) = Tally(values2);
+            Console.WriteLine($"Count of values was {existingCount} and sum of values was {existingSum.ToString("C")}.");
+
             // Patterns examples.
             Console.WriteLine();
             Console.WriteLine("Patterns examples.");
